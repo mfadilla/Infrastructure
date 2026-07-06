@@ -35,7 +35,7 @@ graph TD
     
     NE1 & NE2 & NE3 -->|Pull Metrics every 15s| Prom
     Prom -->|Query Data via PromQL| Graf
-```mermaid
+```
 ## 🛠️ Tech Stack
 | Component | Purpose |
 | :--- | :--- |
@@ -45,4 +45,17 @@ graph TD
 | **Node Exporter** | Hardware and OS metrics exporter |
 | **Grafana** | Data visualization and dashboarding |
 | **LVM** | Logical Volume Manager for dynamic storage allocation |
+
+## 🚨 Challenge & Troubleshooting: The SIGBUS Error
+During the initial deployment, the Prometheus server unexpectedly crashed with a `SIGBUS` error and refused to restart.
+
+**Root Cause:** 
+Upon checking with `df -h`, I found that the root partition (`/`) was at 100% capacity. Prometheus relies on memory-mapped files, and the lack of disk space caused the crash.
+
+**The Fix:**
+To prevent this from happening again, I decoupled the Prometheus data directory from the root filesystem using LVM:
+1. Provisioned a dedicated disk and created a new Logical Volume (LV).
+2. Formatted and mounted it to `/mnt/prometheus_data`.
+3. Updated the Prometheus service configuration to point to the new storage path.
+4. Implemented a data retention policy to automatically prune old metrics.
 ```
