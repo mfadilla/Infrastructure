@@ -35,12 +35,3 @@ graph TD
     
     NE1 & NE2 & NE3 -->|Pull Metrics every 15s| Prom
     Prom -->|Query Data via PromQL| Graf
-    ## 🛠️ Tech Stack
-| Component | Purpose |
-| :--- | :--- |
-| **Proxmox VE** | Hypervisor for VM provisioning |
-| **K3s / Docker** | Container orchestration and runtime |
-| **Prometheus** | Time-series database for metrics scraping |
-| **Node Exporter** | Hardware and OS metrics exporter |
-| **Grafana** | Data visualization and dashboarding |
-| **LVM** | Logical Volume Manager for dynamic storage allocation |
