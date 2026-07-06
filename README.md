@@ -70,5 +70,6 @@ To prevent this from happening again, I decoupled the Prometheus data directory 
 ## 📸 Visual Proof
 <img width="1354" height="632" alt="image" src="https://github.com/user-attachments/assets/0de8a93b-e635-44e3-8fc3-daec1bb4d132" />
 <img width="1346" height="509" alt="image" src="https://github.com/user-attachments/assets/b9dfe01b-2f90-4faa-8a28-58148f8cc011" />
+<img width="1362" height="462" alt="image" src="https://github.com/user-attachments/assets/31f523fd-c311-4053-a126-71a81455656e" />
 
 ```
