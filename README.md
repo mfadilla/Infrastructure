@@ -58,4 +58,16 @@ To prevent this from happening again, I decoupled the Prometheus data directory 
 2. Formatted and mounted it to `/mnt/prometheus_data`.
 3. Updated the Prometheus service configuration to point to the new storage path.
 4. Implemented a data retention policy to automatically prune old metrics.
+
+**Result:** Prometheus now runs with stable storage, and the root partition utilization remains healthy.
+
+## 🔒 Security Hardening
+- **Least Privilege:** Configured services to run as dedicated, non-root users.
+- **Network Isolation:** Prometheus is bound to the internal network. Only Grafana is exposed for querying.
+- **Firewall:** Configured `ufw` to strictly allow only necessary ports for internal scraping.
+
+## 📸 Visual Proof
+<img width="1354" height="632" alt="image" src="https://github.com/user-attachments/assets/0de8a93b-e635-44e3-8fc3-daec1bb4d132" />
+<img width="1346" height="509" alt="image" src="https://github.com/user-attachments/assets/b9dfe01b-2f90-4faa-8a28-58148f8cc011" />
+
 ```
