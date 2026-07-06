@@ -33,7 +33,7 @@ graph TD
     Worker1 --- NE2
     Worker2 --- NE3
     
-    NE1 & NE2 & NE3 -->|Pull Metrics every 15s| Prom
+    NE1 & NE2 & NE3 -->|Pull Metrics every 30s| Prom
     Prom -->|Query Data via PromQL| Graf
 ```
 ## 🛠️ Tech Stack
