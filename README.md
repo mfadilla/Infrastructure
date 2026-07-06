@@ -44,6 +44,7 @@ graph TD
 | **Prometheus** | Time-series database for metrics scraping |
 | **Node Exporter** | Hardware and OS metrics exporter |
 | **Grafana** | Data visualization and dashboarding |
+| **Teleport** | 1 Way Gate Remote Server |
 | **LVM** | Logical Volume Manager for dynamic storage allocation |
 
 ## 🚨 Challenge & Troubleshooting: The SIGBUS Error
