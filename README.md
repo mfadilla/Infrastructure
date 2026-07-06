@@ -35,13 +35,3 @@ graph TD
     
     NE1 & NE2 & NE3 -->|Pull Metrics every 15s| Prom
     Prom -->|Query Data via PromQL| Graf
-
-🔒 Security Hardening
-> Principle of Least Privilege: Configured both Prometheus and Node Exporter to run as dedicated, non-root systemd services (e.g., User=prometheus).
-> Network Isolation: Prometheus is bound to the internal network. Only Grafana is exposed for querying, reducing the attack surface.
-> Firewall Rules: Configured ufw to strictly allow only necessary ports (e.g., 9100 for internal node scraping, blocking external access to 9090).
-
-📸 Visual Proof
-(Note: Tambahkan screenshot di bagian ini nanti!)
-Grafana Dashboard: 
-Prometheus Targets: 
