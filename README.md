@@ -17,8 +17,8 @@ The monitoring stack follows a pull-based architecture to ensure secure and scal
 graph TD
     subgraph Proxmox_VE_Cluster
         Master[Docker Master Node]
-        Worker1[ Worker 1]
-        Worker2[ Worker 2]
+        Worker1[Worker 1]
+        Worker2[Worker 2]
     end
 
     subgraph Monitoring_Stack
