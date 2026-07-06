@@ -35,8 +35,7 @@ graph TD
     
     NE1 & NE2 & NE3 -->|Pull Metrics every 15s| Prom
     Prom -->|Query Data via PromQL| Graf
-
-## 🛠️ Tech Stack
+    ## 🛠️ Tech Stack
 | Component | Purpose |
 | :--- | :--- |
 | **Proxmox VE** | Hypervisor for VM provisioning |
